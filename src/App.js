@@ -1,8 +1,8 @@
 
 import './App.css';
-import Navbar from './components/Navbar';
-import OutfitCreator from './components/OutfitCreator';
-import OutfitForm from './components/OutfitForm';
+import Navbar from './components/NavBar/Navbar';
+import OutfitCreator from './components/OutfitCreator/OutfitCreator';
+import OutfitForm from './components/OutfitForm/OutfitForm';
 //import { BrowserRouter as Router, Routes, Route } from "react-router-dom"
 
 // Routes will go there, but we should do this at the end.
