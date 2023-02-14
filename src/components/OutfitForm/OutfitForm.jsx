@@ -19,17 +19,17 @@ const OutfitForm = () => {
     
         const handleSubmit = (event) => {
             event.preventDefault()
-            addNewRedFlag(formData)
+            addNewOutfit(formData)
             setFormData(initialValues)
         }
     
         return (
     <div>
-        <h2 className="formtitle">Add your Red Flag:</h2>
-        <form className="new-redflag" onSubmit={handleSubmit}>
+        <h2 className="formtitle">New OutFit:</h2>
+        <form className="new-outfit" onSubmit={handleSubmit}>
             <input className="input-one"
                 type="text"
-                placeholder="title"
+                placeholder="name"
                 title='title'
                 onChange={handleOnChange}
             />
@@ -37,10 +37,10 @@ const OutfitForm = () => {
             <input className="input-two"
                 type="text"
                 placeholder="description"
-                title='description'
+                title='location'
                 onChange={handleOnChange}
             />
-            <button className="formbutton">Add</button>
+            <button className="formbutton">Save</button>
         </form>
     </div>
     
