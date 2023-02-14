@@ -1,31 +1,20 @@
-#nyc-map {
-    margin-top: 40%;
-    width: 2000px;
+.map {
+    margin-top: 0.2%;
     display: flex;
-    padding: 1%;
-}
-
-#comments {
-    margin-left: 5%;
-    margin-top: 2%;
-    color: #ff7e5f;
-}
-
-.comment {
-    margin-left: 8%;
-    font-size: large;
-    padding: 1%;
-    font-style: oblique;
-    color: #feb47b;
-}
-
-#fakeformtitle {
-    margin-left: 5%;
-    margin-top: 2%;
-    color: #ff7e5f;
+    flex-wrap: wrap;
+    padding: 3%;
 }
 
 .leaflet-container {
     width: 100%;
-    height: 100vh;
+    height: 90vh;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#findoutfit {
+    color:  #765285;
+    margin: auto;
+    padding: 1%;
+    padding-bottom: 2%;
 }

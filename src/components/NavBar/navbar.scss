@@ -2,22 +2,21 @@
 
 .navbar {
   background-color: #462c5e;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  height: 20vh;
 }
-.title {
-	font-family: "Cairo";
-	text-align: center;
-	color: #FFF;
+.group-links {
 	display: flex;
-	flex-direction: flex;
-	align-items: center;
-	justify-content: left;
-	height: 10vh;
-	letter-spacing: 1px;
-  margin-left: 15px;
-	line-height:2
+	flex-direction: column;
+	align-self: end;
+	align-items: end;
+	margin-right: 30px;
+	margin-bottom: 30px;
 }
 
-h1 {
+#home {
 	background-image: url(https://media.giphy.com/media/26BROrSHlmyzzHf3i/giphy.gif);
 	background-size: cover;
 	color: transparent;
@@ -26,21 +25,17 @@ h1 {
 	text-transform: uppercase;
 	font-size: 100px;
 	margin: 10px 0;
+	margin-left: 30px;
 }
 
-.nav-div {
-	font-family: "Cairo";
-	text-align: center;
-	color: #FFF;
-	display: flex;
-	flex-direction: flex;
-	align-items: center;
-	justify-content: right;
-	height: 5vh;
-	letter-spacing: 1px;
-  margin-right: 20px;
-	line-height:2
-}
+
+#home:hover{
+	color: #ed9d8a;
+	transition: .3s;
+	text-transform: uppercase;
+  }
+
+
 
 .nav-title {
 	background-image: url(https://media.giphy.com/media/26BROrSHlmyzzHf3i/giphy.gif);
