@@ -1,4 +1,4 @@
-import './OutfitForm.scss'
+/*import './OutfitForm.scss'
 import { useState } from "react"
 
 const OutfitForm = () => {
@@ -50,5 +50,4 @@ const OutfitForm = () => {
     
 }
     
-export default OutfitForm
-    
+export default OutfitForm*/
