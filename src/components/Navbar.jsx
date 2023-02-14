@@ -1,5 +1,7 @@
 import './navbar.scss'
 
+// This is just a regular HTML, no logic yet, but the links for the routes will go here.
+
 const Navbar = () => {
     return (
       <div className="navbar">
