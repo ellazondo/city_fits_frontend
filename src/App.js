@@ -1,3 +1,4 @@
+import { useEffect, useState } from 'react'
 
 import './App.css';
 import Navbar from './components/NavBar/Navbar';
@@ -10,6 +11,8 @@ import OutfitMap from './components/OutfitMap/OutfitMap';
 
 // Routes will go there, but we should do this at the end.
 function App() {
+
+  
   return (
     <div>
       <Navbar />

@@ -1,11 +1,23 @@
 import './OutfitMap.scss'
-import nycmap from './nycmap.jpg'
+import { MapContainer, Marker, Popup, TileLayer } from "react-leaflet";
+const center = [40.705329, -74.013969]   
 
 const OutfitMap = () => {
-
     return (
         <div>
-            <img id="nyc-map" src={nycmap} alt="nycmap"/>
+
+            <MapContainer center={center} zoom={14} scrollWheelZoom={false}>
+            <TileLayer
+                attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+                url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+            />
+            <Marker position={center}>
+                <Popup>
+                A pretty CSS3 popup. <br /> Easily customizable.
+                </Popup>
+            </Marker>
+            </MapContainer>
+
             <h2 id="comments">Comments:</h2>
                 <div>
                     <li className="comment">This OutFit is Fire!!! -- by AnaInNyc</li>
