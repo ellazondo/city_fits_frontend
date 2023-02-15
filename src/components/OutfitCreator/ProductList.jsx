@@ -13,40 +13,33 @@ import Slider from "react-slick";
         slidesToScroll: 1
       };
 
-    const displayTopsComponents = displayTops.map(top => {
-        return <ProductCard key={top.id} product={top}/>
-    })
-
-    const displayBottomsComponents = displayBottoms.map(bottom => {
-        return <ProductCard key={bottom.id} product={bottom}/>
-    })
-
-     const displayShoesComponents = displayShoes.map(shoe => {
-        return <ProductCard key={shoe.id} product={shoe}/>
-    })
-
     return (
-        <>
-
-        <Slider {...settings}>
-       { displayTops.map(top => {
-        return <ProductCard key={top.id} product={top}/>
-            })
-        }
-        </Slider>
-        <Slider {...settings}>
-        {displayBottoms.map(bottom => {
-        return <ProductCard key={bottom.id} product={bottom}/>
-        })
-        }
-        </Slider>
-        <Slider {...settings}>
-        {displayShoes.map(shoe => {
-        return <ProductCard key={shoe.id} product={shoe}/>
-        })
-        }
-        </Slider>
-        </>
+    <div>
+        <div>
+            <Slider {...settings}>
+                {displayTops.map(top => {
+                return <ProductCard key={top.id} product={top}/>
+                    })
+                }
+          </Slider>
+        </div>
+        <div>
+            <Slider {...settings}>
+                {displayBottoms.map(bottom => {
+                return <ProductCard key={bottom.id} product={bottom}/>
+                    })
+             }
+            </Slider>
+        </div>
+        <div>
+            <Slider {...settings}>
+                {displayShoes.map(shoe => {
+                return <ProductCard key={shoe.id} product={shoe}/>
+                    })
+            }
+            </Slider>
+        </div>
+    </div>
    
     )}
 
