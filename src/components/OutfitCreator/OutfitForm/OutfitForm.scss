@@ -1,0 +1,107 @@
+.new-outfit-form {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 2rem;
+}
+
+#form-title {
+    margin-left: 55rem;
+    color: #ff765f;
+}
+
+#form-div {
+  position: absolute;
+  transform: translate(-50%,-50%);
+  margin-top: 73%;
+  top: 50%;
+  left: 50%;
+  background: linear-gradient(45deg, #351c4d, #765285, #ff765f, #feb47b, #F5ab99);
+  border-radius: 6%;
+  width: 18%;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+#form-btn {
+    margin-top: 10px;
+    width: 150px;
+    font-size: 1rem;
+    background: transparent;
+    width: 200px;
+    padding: 1em;
+    margin-bottom: 2em;
+    border: none;
+    border-left: 1px solid white;
+    border-top: 1px solid white;
+    border-radius: 5000px;
+    backdrop-filter: blur(5px);
+    box-shadow: 4px 4px 60px rgba(0,0,0,0.2);
+    color: #fff;
+    font-family: Montserrat, sans-serif;
+    font-weight: 500;
+    transition: all 0.2s ease-in-out;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+    
+    &:hover {
+      background: rgba(255,255,255,0.1);
+      box-shadow: 4px 4px 60px 8px rgba(0,0,0,0.2);
+
+    &:active {
+        background: rgba(255,255,255,0.2);
+      }
+
+      &:hover {
+        cursor: pointer;
+      }
+
+      &:hover {
+        margin: 4px;
+      }
+}
+}
+.saved-outfit {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-left: 5%;
+  }
+  
+  .saved-outfit .box {
+    position: relative;
+    width: 30rem;
+    height: 30rem;
+    margin: 4rem;
+  }
+  
+  .saved-outfit .box:hover .imgBox {
+    transform: translate(-3.5rem, -3.5rem);
+  }
+  
+  .imgBox {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+    transition: all 0.5s ease-in-out;
+  }
+  
+  .imgBox img {
+    width: 30rem;
+    height: 30rem;
+    object-fit: cover;
+    resize: both;
+  }
+  
+  
+  @media (max-width: 600px) {
+    .saved-outfit .box:hover .content {
+      transform: translate(0, 3.5rem);
+    }
+    .saved-outfit .box:hover .imgBox {
+      transform: translate(0, -3.5rem);
+    }
+  }
