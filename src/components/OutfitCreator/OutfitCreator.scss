@@ -1,39 +1,39 @@
-.carrusel {
-    margin-top: 15%;
-    width: 100%;
-    height: 100%;
-    position: relative;
+.productcards {
+  list-style: none;
 }
 
-.card {
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    margin: auto;
-    width: 360px;
-    height: 400px;
-    object-fit: cover;
-    opacity: 0;
-
-    transition: 500ms;
+.productcard {
+  margin: 1rem;
 }
 
-.card--active {
-    opacity: 1;
-    transform: scale(1);
-    z-index: 99;
+.productcard img {
+  width: 16rem;
 }
 
-.card--left {
-    transform: translateX(-125%) scale(0.8);
-    transition: 500ms;
-    opacity: 0.3; 
+.productcard button {
+  margin-top: 0.5rem;
 }
 
-.card--right {
-    transform: translateX(+125%) scale(0.8);
-    transition: 500ms;
-    opacity: 0.3; 
+@media (min-width: 768px) {
+  .productcards {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .productcard {
+    width: calc(33% - 2rem);
+  }
 }
+
+@media (min-width: 1024px) {
+  .productcard {
+    width: calc(25% - 2rem);
+  }
+}
+
+@media (min-width: 1200px) {
+  .productcard {
+    width: calc(20% - 2rem);
+  }
+}
+
