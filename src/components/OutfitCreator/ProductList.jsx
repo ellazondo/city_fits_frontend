@@ -15,7 +15,7 @@ import Slider from "react-slick";
 
     return (
     <div>
-        <div>
+        <div className="cards">
             <Slider {...settings}>
                 {displayTops.map(top => {
                 return <ProductCard key={top.id} product={top}/>
@@ -23,7 +23,7 @@ import Slider from "react-slick";
                 }
           </Slider>
         </div>
-        <div>
+        <div className="cards">
             <Slider {...settings}>
                 {displayBottoms.map(bottom => {
                 return <ProductCard key={bottom.id} product={bottom}/>
@@ -31,7 +31,7 @@ import Slider from "react-slick";
              }
             </Slider>
         </div>
-        <div>
+        <div className="cards">
             <Slider {...settings}>
                 {displayShoes.map(shoe => {
                 return <ProductCard key={shoe.id} product={shoe}/>

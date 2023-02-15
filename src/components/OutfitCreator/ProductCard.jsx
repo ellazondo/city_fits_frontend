@@ -1,5 +1,5 @@
 function ProductCard({product}) {
-    const { link, name } = product;
+    const { link } = product;
     //destructuring link,name,style, category from product
 
     
@@ -8,7 +8,6 @@ function ProductCard({product}) {
         <div className="pic-ctn"> 
         <li className="productcard">
              <img src={link} /> 
-            <h4>{name}</h4>
         </li>
         </div>
             )}

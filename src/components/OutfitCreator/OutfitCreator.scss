@@ -1,17 +1,24 @@
 .productcards {
   list-style: none;
+  display: flex;
+  flex-wrap: wrap;
 }
 
 .productcard {
   margin: 1rem;
+  margin-left: 7rem;
 }
 
 .productcard img {
-  width: 16rem;
+  width: 8rem;
+  display: flex;
+  flex-wrap: wrap;
 }
 
-.productcard button {
-  margin-top: 0.5rem;
+.cards {
+  margin-bottom: 1%;
+  padding-left: 7%;
+  padding-right: 7%;
 }
 
 @media (min-width: 768px) {
