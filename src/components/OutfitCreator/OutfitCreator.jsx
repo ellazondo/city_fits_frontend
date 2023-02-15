@@ -1,6 +1,7 @@
 import './OutfitCreator.scss';
 import {useState, useEffect } from "react";
 import ProductList from "./ProductList";
+import OutfitForm from './OutfitForm/OutfitForm';
 
 
 function OutfitCreator() {
@@ -30,9 +31,12 @@ const displayShoes = products.filter((product) => {
 });
 
     return (
+        <>
         <ProductList 
         displayTops={displayTops} displayBottoms={displayBottoms} displayShoes={displayShoes}
         />
+        <OutfitForm />
+        </>
     )
 }
 
