@@ -4,6 +4,7 @@ import { Link } from "react-router-dom"
 // This is just a regular HTML, no logic yet, but the links for the routes will go here.
 
 const Navbar = () => {
+  // Test
     return (
       <div className="navbar">
         <div className="title">
