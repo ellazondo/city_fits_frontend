@@ -39,10 +39,6 @@ const OutfitMap = () => {
             <MapPopUp/>
             </MapContainer>
 
-            <div className='outfit-list'>
-            <h2 id="findoutfit">All OutFits:</h2>
-                {renderOutfitList}
-            </div>
         </div>
     )
 }

@@ -7,7 +7,7 @@ const LogIn = () => {
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet"/> 
 
 <div class="container">
-  <form>
+  <form id='form'>
     <p>Welcome</p>
     <input type="email" placeholder="Email"/><br></br>
     <input type="password" placeholder="Password"/><br></br>

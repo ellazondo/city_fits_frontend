@@ -4,10 +4,11 @@ import { Link } from "react-router-dom"
 // This is just a regular HTML, no logic yet, but the links for the routes will go here.
 
 const Navbar = () => {
+  // Test
     return (
       <div className="navbar">
         <div className="title">
-        <Link id='home' to='/Home'>CityFits</Link>
+        <Link id='home' to='/'>CityFits</Link>
         </div>
         <div className="group-links">
       <div className='nav-div'>
