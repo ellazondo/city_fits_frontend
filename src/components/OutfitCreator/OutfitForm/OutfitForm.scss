@@ -1,25 +1,63 @@
+$white: rgba(255,255,255,0.3);
+
 .new-outfit-form {
     display: flex;
     flex-wrap: wrap;
-    margin-top: 2rem;
+    margin-top: 8rem;
+    box-shadow: 4px 4px 60px 8px rgba(103, 3, 133, 0.2);
+    border-radius: 5%;
+    width: 100%
+    
 }
 
-#form-title {
-    margin-left: 55rem;
-    color: #ff765f;
+#outfit-form {
+background: $white;
+padding: 3em;
+border-radius: 20px;
+border-left: 1px solid $white;
+border-top: 1px solid $white;
+backdrop-filter: blur(10px);
+box-shadow: 20px 20px 40px -6px rgba(0,0,0,0.2);
+text-align: center;
+position: relative;
+transition: all 0.2s ease-in-out;
+width: 100%;
+height: min-content;
+
+p {
+  font-weight: 500;
+  color: #fff;
+  opacity: 0.7;
+  font-size: 1.4rem;
+  margin-top: 0;
+  margin-bottom: 10px;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+}
+}
+
+.inputs-div {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.form-input {
+  width: 300px;
 }
 
 #form-div {
-  position: absolute;
-  transform: translate(-50%,-50%);
-  margin-top: 73%;
-  top: 50%;
+  position: relative;
+  transform: translate(-50%);
+  margin-top: 5rem;
+  // top: 50%;
   left: 50%;
+  bottom: 0;
   background: linear-gradient(45deg, #351c4d, #765285, #ff765f, #feb47b, #F5ab99);
   border-radius: 6%;
-  width: 18%;
+  width: 80%;
   display: flex;
   flex-wrap: wrap;
+  margin-bottom: 4rem;
 }
 
 #form-btn {
@@ -41,6 +79,7 @@
     font-weight: 500;
     transition: all 0.2s ease-in-out;
     text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+
     
     &:hover {
       background: rgba(255,255,255,0.1);
@@ -59,49 +98,94 @@
       }
 }
 }
-.saved-outfit {
+
+:root {
+    --surface-color: #fff;
+    --curve: 40;
+  }
+  
+  * {
+    box-sizing: border-box;
+  }
+  
+  
+  .cards {
+    display: inherit;
+    //grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 5rem;
+    margin: 4rem 5vw;
+    padding: 0;
+    list-style-type: none;
+  }
+  
+  .card {
+    position: relative;
+    display: block;
+    height: 100%; 
+    width: 70%; 
+    border-radius: calc(var(--curve) * 1px);
+    overflow: hidden;
+    text-decoration: none;
+    box-shadow: 4px 4px 60px 8px rgba(80, 3, 116, 0.2);
+    margin-left: 5rem;
+  }
+  
+  .card__image {      
+    width: 100%;
+    height: auto;
+  }
+
+  .card:hover {
+    background: rgba(255,255,255,0.1);
+    box-shadow: 4px 4px 60px 8px rgba(0,0,0,0.2);
+  }
+  
+  .card__overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;      
+    border-radius: calc(var(--curve) * 1px);    
+    background-color: var(--surface-color);      
+    transform: translateY(100%);
+    transition: .2s ease-in-out;
+  }
+  
+  .card:hover .card__overlay {
+    transform: translateY(0);
+    
+  }
+  
+  .card__header {
     position: relative;
     display: flex;
-    justify-content: center;
     align-items: center;
-    flex-wrap: wrap;
-    margin-left: 5%;
+    gap: 2em;
+    padding: 2em;
+    border-radius: calc(var(--curve) * 1px) 0 0 0;    
+    background-color: var(--surface-color);
+    transform: translateY(-100%);
+    transition: .2s ease-in-out;
   }
   
-  .saved-outfit .box {
-    position: relative;
-    width: 30rem;
-    height: 30rem;
-    margin: 4rem;
+  .card:hover .card__header {
+    transform: translateY(0);
   }
   
-  .saved-outfit .box:hover .imgBox {
-    transform: translate(-3.5rem, -3.5rem);
+  .card__title {
+    font-size: 1em;
+    margin: 0 0 .3em;
+    color: #6A515E;
   }
   
-  .imgBox {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: 2;
-    transition: all 0.5s ease-in-out;
-  }
-  
-  .imgBox img {
-    width: 30rem;
-    height: 30rem;
-    object-fit: cover;
-    resize: both;
-  }
-  
-  
-  @media (max-width: 600px) {
-    .saved-outfit .box:hover .content {
-      transform: translate(0, 3.5rem);
-    }
-    .saved-outfit .box:hover .imgBox {
-      transform: translate(0, -3.5rem);
-    }
-  }
+  .card__description {
+    padding: 0 2em 2em;
+    margin: 0;
+    color: #D7BDCA;
+    font-family: "MockFlowFont";   
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+    overflow: hidden;
+  }    

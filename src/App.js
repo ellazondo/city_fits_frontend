@@ -16,7 +16,7 @@ function App() {
       <Router >
         <Navbar />
           <Routes>
-              <Route path='/Home' element={<Home />} />
+              <Route path='/' element={<Home />} />
               <Route path='/OutfitCreator' element={<OutfitCreator />} />
               <Route path='/OutfitMap' element={<OutfitMap />} />
               <Route path='/LogIn' element={<LogIn />} />
