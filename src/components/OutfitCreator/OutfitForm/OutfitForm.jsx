@@ -25,7 +25,7 @@ export default function OutfitForm() {
   </li>
   <li>
     <a href="" className="card">
-      <img src={pants} class="card__image" alt="" />
+      <img src={pants} className="card__image" alt="bottom" />
       <div className="card__overlay">        
         <div className="card__header">                 
           <div className="card__header-text">
@@ -38,14 +38,14 @@ export default function OutfitForm() {
   </li>
   <li>
     <a href="" className="card">
-      <img src={shoes} class="card__image" alt="" />
+      <img src={shoes} className="card__image" alt="shoes" />
       <div className="card__overlay">
         <div className="card__header">
           <div className="card__header-text">
             <h3 className="card__title">Shoes</h3>   
           </div>
         </div>
-        <p class="card__description">Wow, you got shoes!</p>
+        <p className="card__description">Wow, you got shoes!</p>
       </div>
     </a>
   </li> 
@@ -80,12 +80,12 @@ export default function OutfitForm() {
       </form>
 
       
-  <div class="drops">
-    <div class="drop drop-1"></div>
-    <div class="drop drop-2"></div>
-    <div class="drop drop-3"></div>
-    <div class="drop drop-4"></div>
-    <div class="drop drop-5"></div>
+  <div className="drops">
+    <div className="drop drop-1"></div>
+    <div className="drop drop-2"></div>
+    <div className="drop drop-3"></div>
+    <div className="drop drop-4"></div>
+    <div className="drop drop-5"></div>
   </div>
     </div>
   </div>
