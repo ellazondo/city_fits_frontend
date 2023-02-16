@@ -21,6 +21,7 @@ const OutfitMap = () => {
         fetchOutfits();
     }, [])
 
+    // pulls up list of outfits
     const renderOutfitList = outfits.map((outfit) => {
         return (
             <div classname='outfit' >
@@ -28,7 +29,6 @@ const OutfitMap = () => {
             </div>
         )
     })
-
 
     // create new object to add to combos array
     const newOutfit = {
@@ -38,9 +38,8 @@ const OutfitMap = () => {
         user_id: 1
         }
 
-    // state to pass new object into
+    // state to pass newOutfit object into
     const [formData, setFormData] = useState(newOutfit)
-
 
     // handleChange to take user imput
     const handleChange = (e) => {
@@ -55,21 +54,18 @@ const OutfitMap = () => {
     }
 
 
-    // post method to pass through fetch
-    const objPost = {
+    // fetch to post new outfit
+    const handleSubmit = async () => {
+        let res = await fetch("http://localhost:3000/outfits",{
         method: "POST",
         headers: {
         "Content-Type": "application/json"
       },
         body:JSON.stringify(formData)
-    }
-
-    const postNewOutfit = async () => {
-        fetch("http://localhost:3000/outfits",objPost)
-        .then(r => r.json())
-        .then((newOutfit) => onAddNewOutfit(newOutfit))
-    }
-
+    })
+        let newFit = await res.json();
+        onAddNewOutfit(newFit)
+    };
 
 
     return (
@@ -85,7 +81,6 @@ const OutfitMap = () => {
                     hello 
                     </Popup>
                 </Marker>
-                {/* {renderOutfitPopUp} */}
             </MapContainer>
 
             <div className='outfit-list'>
@@ -94,28 +89,28 @@ const OutfitMap = () => {
             </div>
             
 
-        <form id='outfit-form' onSubmit={postNewOutfit}>
+        <form id='outfit-form' onSubmit={handleSubmit}>
             <div className='inputs-div'>
                 <input
                 className='form-input'
                 type="text"
                 name="name"
                 placeholder="Outfit name"
-                onChange={handleChange}
+                required onChange={handleChange}
                 />
                 <input
                 className='form-input'
                 type="text"
                 name="latitude"
                 placeholder="Latitude"
-                onChange={handleChange}
+                required onChange={handleChange}
                 />
                 <input
                 className='form-input'
                 type="text"
                 name="longitude"
                 placeholder="Longitude"
-                onChange={handleChange}
+                required onChange={handleChange}
                 />
             </div>
             <div>
