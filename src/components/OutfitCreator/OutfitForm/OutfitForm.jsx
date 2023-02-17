@@ -8,70 +8,132 @@ export default function OutfitForm({outfitFormTop, outfitFormBottom, outfitFormS
 
   return (
     <div className="new-outfit-form">
-      <form className='saved-outfit'>
-        <div className='box'>
-        <span className='imgBox'>
-          <picture ><img className="productcard-form" src={topLink} /></picture>
-        </span>
+<ul className="cards">
+  <li>
+    <a href="" className="card">
+    <picture ><img className="card__image" src={topLink} /></picture>
+      <div className="card__overlay">
+        <div className="card__header">                       
+          <div className="card__header-text">
+            <h3 className="card__title">Top</h3>            
+          </div>
         </div>
-            
-            <div className='box'>
-        <span className='imgBox'>
-          <picture ><img className="productcard-form" src={bottomLink} /></picture>
-        </span>
+        <p className="card__description">Congrats, you picked a top!</p>
+      </div>
+    </a>      
+  </li>
+  <li>
+    <a href="" className="card">
+    <picture ><img className="card__image" src={bottomLink} /></picture>
+      <div className="card__overlay">        
+        <div className="card__header">                 
+          <div className="card__header-text">
+            <h3 className="card__title">Bottom</h3>
+          </div>
         </div>
-            
-
-            <div className='box'>
-        <span className='imgBox'>
-          <picture ><img className="productcard-form" src={shoesLink}></img></picture>						
-        </span>
+        <p className="card__description">Yay, you chose a bottom!</p>
+      </div>
+    </a>
+  </li>
+  <li>
+    <a href="" className="card">
+    <picture ><img className="card__image" src={shoesLink}></img></picture>
+      <div className="card__overlay">
+        <div className="card__header">
+          <div className="card__header-text">
+            <h3 className="card__title">Shoes</h3>   
+          </div>
         </div>
-      </form>
+        <p className="card__description">Wow, you got shoes!</p>
+      </div>
+    </a>
+  </li> 
+</ul>
 
-        <h2 id='form-title'>CREATE YOUR OUTFIT</h2>
-
-      <div id='form-div'>
+    <div id='form-div'>
       <form id='outfit-form'>
+        <div className='inputs-div'>
         <input
+          className='form-input'
           type="text"
           name="name"
           placeholder="Outfit name"
         />
          <input
+          className='form-input'
           type="text"
           name="name"
           placeholder="Latitude"
         />
-                 <input
+        <input
+         className='form-input'
           type="text"
           name="name"
           placeholder="Longitude"
         />
+        </div>
+        <div>
         <button id='form-btn' type="save">Save Outfit</button>
-        {/* <p href="#">Don't have an account? Sign In</p> */}
+        </div>
+        <p href="#">Don't have an account? Sign In</p>
       </form>
 
       
-  <div class="drops">
-    <div class="drop drop-1"></div>
-    <div class="drop drop-2"></div>
-    <div class="drop drop-3"></div>
-    <div class="drop drop-4"></div>
-    <div class="drop drop-5"></div>
+  <div className="drops">
+    <div className="drop drop-1"></div>
+    <div className="drop drop-2"></div>
+    <div className="drop drop-3"></div>
+    <div className="drop drop-4"></div>
+    <div className="drop drop-5"></div>
   </div>
     </div>
-    </div>
-  );
+  </div>
+  )
 }
 
-      // <form onSubmit={handleSubmit}>
+    // <div className="new-outfit-form">
+    //   <form className='saved-outfit'>
+    //     <div className='box'>
+    //     <span className='imgBox'>
+    //       <picture ><img className="productcard-form" src={topLink} /></picture>
+    //     </span>
+    //     </div>
+            
+    //         <div className='box'>
+    //     <span className='imgBox'>
+    //       <picture ><img className="productcard-form" src={bottomLink} /></picture>
+    //     </span>
+    //     </div>
+            
+
+    //         <div className='box'>
+    //     <span className='imgBox'>
+    //       <picture ><img className="productcard-form" src={shoesLink}></img></picture>						
+    //     </span>
+    //     </div>
+    //   </form>
+
+       
+
+      // <div id='form-div'>
+      // <form id='outfit-form'>
       //   <input
       //     type="text"
       //     name="name"
       //     placeholder="Outfit name"
-      //     value={name}
-      //     onChange={(e) => setNewOutfitName(e.target.value)}
       //   />
-      //   <button type="save">Save Outfit</button>
+      //    <input
+      //     type="text"
+      //     name="name"
+      //     placeholder="Latitude"
+      //   />
+      //            <input
+      //     type="text"
+      //     name="name"
+      //     placeholder="Longitude"
+      //   />
+      //   <button id='form-btn' type="save">Save Outfit</button>
+      //   {/* <p href="#">Don't have an account? Sign In</p> */}
       // </form>
+
+      
