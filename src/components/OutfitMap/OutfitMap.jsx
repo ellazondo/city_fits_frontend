@@ -54,6 +54,7 @@ const OutfitMap = () => {
     const renderOutfitPopUp = outfits.map((outfit) => {
         const coordinates = [outfit.latitude, outfit.longitude]
         return (
+            
             <MapPopUp 
             coordinates={coordinates} 
             outfit={outfit} 
@@ -112,13 +113,8 @@ const OutfitMap = () => {
             />
                 {renderOutfitPopUp}
             </MapContainer>
-
-            <div className='outfit-list'>
-            <h2 id="findoutfit">All OutFits:</h2>
-                {renderOutfitList}
-            </div>
             
-
+    <div id='form-div'>
         <form id='outfit-form' onSubmit={handleSubmit}>
             <div className='inputs-div'>
                 <input
@@ -147,8 +143,24 @@ const OutfitMap = () => {
                 <button id='form-btn' type="save">Save Outfit</button>
             </div>
         </form>
+    </div>
 
-        </div>
+
+{/* <div className="drop-form">
+<div className="drop drop-11"></div>
+<div className="drop drop-22"></div>
+<div className="drop drop-33"></div>
+<div className="drop drop-44"></div>
+<div className="drop drop-55"></div>
+</div> */}
+
+
+   {/* <h2 id="findoutfit">All OutFits:</h2> */}
+                <div className='reder-fits'>{renderOutfitList}</div>
+           
+</div>
+
+
     )
 }
 
