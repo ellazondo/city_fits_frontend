@@ -1,12 +1,18 @@
 import { useState, useEffect } from 'react';
 import { MapContainer, Marker, Popup, TileLayer } from "react-leaflet";
 
-const MapPopUp = () => {
-
+const MapPopUp = ({ coordinates, outfit, handleDeleteOutfit }) => {
+    const handleDeleteClick = async () => {
+        fetch(`http://localhost:3000/outfits/${outfit.id}`,{
+        method: "DELETE",
+        });
+        handleDeleteOutfit(outfit.id);
+    }
 return (
-    <Marker position={[40.705329, -74.013969]}>
+    <Marker position={coordinates}>
         <Popup>
-        flatiron school
+            <h3>{outfit.name}</h3>
+            <button onClick={handleDeleteClick}>delete</button>
         </Popup>
     </Marker>
     )

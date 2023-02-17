@@ -1,5 +1,5 @@
 import './OutfitMap.scss'
-import { useState, useEffect, useCallback } from 'react';
+import { useState, useEffect, useRef, useMemo, useCallback } from 'react';
 import { MapContainer, Marker, Popup, TileLayer } from "react-leaflet";
 import MapPopUp from './MapPopUp.jsx';
 
@@ -11,7 +11,6 @@ const OutfitMap = () => {
     // state to set outfits
     const [outfits, setOutfits] = useState([]);
 
-    
     useEffect(() => {
         const fetchOutfits = async () => {
             let res = await fetch("http://localhost:3000/outfits")
@@ -24,12 +23,28 @@ const OutfitMap = () => {
     // pulls up list of outfits
     const renderOutfitList = outfits.map((outfit) => {
         return (
-            <div classname='outfit' >
+            <div className='outfit' >
                 <ul>{outfit.name}</ul>
             </div>
         )
     })
 
+        // DELETE OUTFIT ------------------------------------------------
+
+    const handleDeleteOutfit = (id) => {
+        const updatedOutfits = outfits.filter((outfit) => outfit.id !== id);
+        setOutfits(updatedOutfits);
+    }
+    // END OF DELETING OUTFIT ---------------------------------------
+    
+    const renderOutfitPopUp = outfits.map((outfit) => {
+        const coordinates = [outfit.latitude, outfit.longitude]
+        return (
+            <MapPopUp coordinates={coordinates} outfit={outfit} handleDeleteOutfit={handleDeleteOutfit} />
+        )
+    })
+
+    // CREATE NEW OUTFIT ----------------------------------------
     // create new object to add to combos array
     const newOutfit = {
         name: "",
@@ -66,6 +81,11 @@ const OutfitMap = () => {
         let newFit = await res.json();
         onAddNewOutfit(newFit)
     };
+    // END OF CREATING OUTFIT ---------------------------------------
+    
+    // UPDATE OUTFIT ------------------------------------------------
+
+    // END OF UPDATING OUTFIT ---------------------------------------
 
 
     return (
@@ -76,11 +96,7 @@ const OutfitMap = () => {
                 attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
                 url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
             />
-                <Marker position={[40.70537726572433, -74.0138610846558]}>
-                    <Popup>
-                    hello 
-                    </Popup>
-                </Marker>
+                {renderOutfitPopUp}
             </MapContainer>
 
             <div className='outfit-list'>
