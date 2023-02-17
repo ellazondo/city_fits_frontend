@@ -6,16 +6,19 @@ import OutfitForm from './OutfitForm/OutfitForm';
 
 function OutfitCreator() {
 
-      // ella setting state for fetched products
-  const [products, setProducts] = useState([])
+    // ella setting state for fetched products
+    const [products, setProducts] = useState([])
+    const [outfitFormTop, setOutfitFormTop] = useState({});
+    const [outfitFormBottom, setOutfitFormBottom] = useState({});
+    const [outfitFormShoes, setOutfitFormShoes] = useState({})
 
-  //ella adding in fetch for rendering products
-  useEffect(() => {
-    fetch("http://localhost:3000/products")
-    .then(res => res.json())
-    .then(productData =>
-      setProducts(productData))
-  }, [])
+    //ella adding in fetch for rendering products
+    useEffect(() => {
+        fetch("http://localhost:3000/products")
+        .then(res => res.json())
+        .then(productData =>
+        setProducts(productData))
+    }, [])
 
 
 const displayTops = products.filter((product) => {
@@ -33,9 +36,18 @@ const displayShoes = products.filter((product) => {
     return (
         <>
         <ProductList 
-        displayTops={displayTops} displayBottoms={displayBottoms} displayShoes={displayShoes}
+        displayTops={displayTops} 
+        displayBottoms={displayBottoms} 
+        displayShoes={displayShoes}
+        setOutfitFormTop={setOutfitFormTop}
+        setOutfitFormBottom={setOutfitFormBottom}
+        setOutfitFormShoes={setOutfitFormShoes}
         />
-        <OutfitForm />
+        <OutfitForm 
+        outfitFormTop={outfitFormTop}
+        outfitFormBottom={outfitFormBottom}
+        outfitFormShoes={outfitFormShoes} 
+        />
         </>
     )
 }

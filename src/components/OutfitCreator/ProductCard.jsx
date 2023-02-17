@@ -1,13 +1,15 @@
-function ProductCard({product}) {
-    const { link } = product;
-    //destructuring link,name,style, category from product
+function ProductCard({ product, setProduct }) {
 
+    function handleClick() {
+        setProduct(product)
+    }
     
+ 
     return (
 
-        <div className="pic-ctn"> 
+        <div className="pic-ctn" onClick={handleClick}> 
         <li className="productcard">
-             <img src={link} /> 
+             <img src={product.link} /> 
         </li>
         </div>
             )}
