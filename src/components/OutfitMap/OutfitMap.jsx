@@ -29,18 +29,36 @@ const OutfitMap = () => {
         )
     })
 
-        // DELETE OUTFIT ------------------------------------------------
+
+    // UPDATE OUTFIT ------------------------------------------------
+    const handleUpdateOutfit = (updatedOutfit) => {
+        const updatedOutfitsArray = outfits.map((outfit) => {
+            if (outfit.id === updatedOutfit.id) {
+                return updatedOutfit;
+            } else {
+                return outfit;
+            }
+        });
+        setOutfits(updatedOutfitsArray);
+    }
+    // END OF UPDATING OUTFIT ---------------------------------------
+    // DELETE OUTFIT ------------------------------------------------
 
     const handleDeleteOutfit = (id) => {
         const updatedOutfits = outfits.filter((outfit) => outfit.id !== id);
         setOutfits(updatedOutfits);
     }
+
     // END OF DELETING OUTFIT ---------------------------------------
     
     const renderOutfitPopUp = outfits.map((outfit) => {
         const coordinates = [outfit.latitude, outfit.longitude]
         return (
-            <MapPopUp coordinates={coordinates} outfit={outfit} handleDeleteOutfit={handleDeleteOutfit} />
+            <MapPopUp 
+            coordinates={coordinates} 
+            outfit={outfit} 
+            handleUpdateOutfit={handleUpdateOutfit}
+            handleDeleteOutfit={handleDeleteOutfit} />
         )
     })
 
@@ -82,10 +100,6 @@ const OutfitMap = () => {
         onAddNewOutfit(newFit)
     };
     // END OF CREATING OUTFIT ---------------------------------------
-    
-    // UPDATE OUTFIT ------------------------------------------------
-
-    // END OF UPDATING OUTFIT ---------------------------------------
 
 
     return (
