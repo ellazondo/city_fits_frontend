@@ -1,27 +1,92 @@
 import './navbar.scss'
 import { Link } from "react-router-dom"
 
-// This is just a regular HTML, no logic yet, but the links for the routes will go here.
+
 
 const Navbar = () => {
-  // Test
+  
     return (
-      <div className="navbar">
-        <div className="title">
-        <Link id='home' to='/'>CityFits</Link>
+
+<section class="bg-white">
+  <nav>
+    <div class="flex py-6 px-4 md:px-14 items-center">
+      <button class="flex w-14 h-14 mr-12 items-center justify-center navbar-burger border border-gray-50 hover:border-gray-500 transform hover:rotate-45 rounded-full transition duration-300">
+        <svg width="32" height="12" viewBox="0 0 32 12" fill="none" xmlns="http://www.w3.org/2000/svg"><rect width="32" height="2" fill="black"></rect><rect y="10" width="19" height="2" fill="black"></rect></svg>
+      </button>
+      <a class="inline-blockfont-bold w-10 h-10" href="#">
+        <img src="https://img.freepik.com/premium-vector/cf-logo_590037-57.jpg?" alt="" />
+      </a>
+      <div class="hidden lg:flex items-center ml-auto">
+        <div class="mr-12">
+          <ul class="hidden xl:flex items-center">
+ 
+            <li class="mr-16"><a class="inline-block text-base font-medium text-black" href="#">
+              <Link id='home' to='/'>CityFits</Link>
+              </a></li>
+            <li class="mr-16"><a class="inline-block text-base font-medium text-black" href="#">
+              <Link to='/OutfitCreator'>OutFit Creator</Link>
+              </a></li>
+            <li><a class="inline-block text-base font-medium text-black" href="#">
+              <Link to='/OutfitMap'>OutFit Map</Link>
+              </a></li>
+          </ul>
         </div>
-        <div className="group-links">
-      <div className='nav-div'>
-        <Link className='nav-title' id='outfitcreator' to='/OutfitCreator'>OutFit Creator</Link>
-      </div>
-      <div className='nav-div'>
-        <Link  className='nav-title' id='outfitmap' to='/OutfitMap'>OutFit Map</Link>
-      </div>
-      <div className='nav-div'>
-        <Link className='nav-title' id='login' to='/LogIn'>Log In</Link>
-      </div>
+        <div class="w-px h-12 mx-6 bg-gray-200"></div>
+        <a class="inline-flex mr-12 items-center" href="#">
+          <div class="relative w-10 h-10 rounded-full mr-4">
+            <img src="https://i.imgur.com/dkhBxNL.jpeg" alt="" />
+            <div class="absolute bottom-0 right-0 -mr-px -mb-1 flex w-4 h-4 items-center justify-center rounded-full bg-indigo-500 text-white text-xs font-bold">3</div>
+          </div>
+          <span class="font-medium">@Elina</span>
+        </a>
+        <a class="relative group inline-flex h-12 w-24 items-center justify-center font-semibold rounded-lg bg-blue-500 overflow-hidden" href="#">
+          <span class="relative z-10 text-black group-hover:text-white transition duration-500">Logout</span>
+          <div class="absolute top-0 left-0 h-full w-28 transform -translate-x-full -ml-1 group-hover:-translate-x-0 bg-black transition duration-500 ease-linear"></div>
+        </a>
       </div>
     </div>
+  </nav>
+  <div class="hidden navbar-menu fixed top-0 left-0 bottom-0 w-5/6 max-w-sm z-50">
+    <div class="navbar-backdrop fixed inset-0 backdrop-blur-xl backdrop-filter bg-gray-900 bg-opacity-80"></div>
+    <nav class="relative pt-8 pb-8 bg-white h-full overflow-y-auto">
+      <div class="flex flex-col px-6 h-full">
+        <a class="inline-block text-2xl font-bold ml-8 mb-16" href="#">
+          <img src="https://img.freepik.com/premium-vector/cf-logo_590037-57.jpg?w=2000" alt="" />
+        </a>
+        <ul class="w-full mb-auto pb-16">
+          <li class="group mb-6">
+            <button class="inline-block text-left text-base font-medium text-black">
+              <div class="flex items-center">
+                <span class="mr-3">Resources</span>
+                <svg width="12" height="7" viewBox="0 0 12 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M11.332 0.999974L10.3887 0.0566406L6.66536 3.77997L5.9987 4.5L5.33203 3.77997L1.6087 0.0566402L0.665365 0.999974L5.9987 6.33331L11.332 0.999974Z" fill="currentColor"></path>
+                </svg>
+              </div>
+            </button>
+            <div class="hidden group-hover:block pt-4">
+              <div class="pl-6"><a class="block mb-2 text-black" href="#">Link 1</a><a class="block mb-2 text-black" href="#">Link 1</a><a class="block text-black" href="#">Link 1</a></div>
+            </div>
+          </li>
+          <li class="mb-6"><a class="inline-block text-base font-medium text-black" href="#">Community</a></li>
+          <li class="mb-6"><a class="inline-block text-base font-medium text-black" href="#">Story</a></li>
+          <li><a class="inline-block text-base font-medium text-black" href="#">Pricing</a></li>
+        </ul>
+        <div class="w-full">
+          <a class="relative group inline-flex h-12 w-full mb-4 items-center justify-center font-semibold rounded-lg bg-white border border-black" href="#">
+            <span class="text-black">Login</span>
+          </a>
+          <a class="relative inline-flex h-12 w-full mb-4 items-center justify-center font-semibold rounded-lg bg-blue-500" href="#">
+            <span class="text-black">Logout</span>
+          </a>
+          <p class="pl-2 text-sm">2022 © Shuffle</p>
+        </div>
+      </div>
+    </nav>
+  </div>
+</section>
+
+
+
     )
 }
 

@@ -6,10 +6,10 @@ import Slider from "react-slick";
     //products is passed as a prop. so far we can access each product as an object.
 
     let settings = {
-        dots: true,
+        dots: false,
         infinite: true,
         speed: 500,
-        slidesToShow: 5,
+        slidesToShow: 7,
         slidesToScroll: 1
       };
 

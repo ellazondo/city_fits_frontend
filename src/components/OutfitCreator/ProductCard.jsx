@@ -4,11 +4,10 @@ function ProductCard({ product, setProduct }) {
         setProduct(product)
     }
     
- 
     return (
 
-        <div className="pic-ctn" onClick={handleClick}> 
-        <li className="productcard">
+        <div className="slider-container" onClick={handleClick}> 
+        <li className="slider-pic">
              <img src={product.link} /> 
         </li>
         </div>

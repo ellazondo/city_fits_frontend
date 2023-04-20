@@ -2,9 +2,10 @@ import './OutfitCreator.scss';
 import {useState, useEffect } from "react";
 import ProductList from "./ProductList";
 import OutfitForm from './OutfitForm/OutfitForm';
+import HowItWorks from './HowItWorks';
 
 
-function OutfitCreator() {
+export default function OutfitCreator() {
 
     // ella setting state for fetched products
     const [products, setProducts] = useState([])
@@ -35,6 +36,11 @@ const displayShoes = products.filter((product) => {
 
     return (
         <>
+        
+        {/* <div className='HowItWorks'> */}
+        <HowItWorks />
+        {/* </div> */}
+        {/* <div className='ProductList'> */}
         <ProductList 
         displayTops={displayTops} 
         displayBottoms={displayBottoms} 
@@ -43,13 +49,18 @@ const displayShoes = products.filter((product) => {
         setOutfitFormBottom={setOutfitFormBottom}
         setOutfitFormShoes={setOutfitFormShoes}
         />
+        {/* </div> */}
+        
         <OutfitForm 
         outfitFormTop={outfitFormTop}
         outfitFormBottom={outfitFormBottom}
         outfitFormShoes={outfitFormShoes} 
         />
+
+        
+        
         </>
     )
 }
 
-export default OutfitCreator 
+ 
