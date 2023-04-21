@@ -8,7 +8,7 @@ function ProductCard({ product, setProduct }) {
 
         <div className="slider-container" onClick={handleClick}> 
         <li className="slider-pic">
-             <img src={product.link} /> 
+             <img className="rounded-full" src={product.link} /> 
         </li>
         </div>
             )}
