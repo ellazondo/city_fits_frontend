@@ -2,7 +2,7 @@ import blueEclipse from './blue-eclipse.png'
 
 export default function HowItWorks () {
     return (
-        <section className="how-container mb-40 -mt-5 pt-20 2xl:pt-40 pb-40 2xl:pb-80 overflow-hidden block relative h-96 ">
+        <section className="how-container mb-20 -mt-5 pt-20 2xl:pt-40 pb-40 2xl:pb-80 overflow-hidden block relative h-96 ">
   <div className="px-4 mx-auto ">
     <div className="max-w-xl mx-auto mb-16 lg:mb-28 text-center ">
       <span className="text-lg font-bold text-blue-500">- - -</span>
@@ -57,6 +57,7 @@ export default function HowItWorks () {
                 <h4 className="text-4xl font-bold text-white">Bottom</h4>
               </div>
             </div>
+            
           </div>
 
 
@@ -136,7 +137,9 @@ export default function HowItWorks () {
         </div>
       </div>
     </div>
+    
   </div>
+  
 </section>
     )
 }

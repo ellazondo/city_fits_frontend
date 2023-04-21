@@ -14,7 +14,10 @@ import Slider from "react-slick";
       };
 
     return (
-    <div>
+        <div className="product-list">
+        <h2 className="pl-5 mb-22 text-8xl font-bold font-heading items-center">The Collection.</h2>
+    <div className="slider-card-container">
+        
         <div className="cards">
             <Slider {...settings}>
                 {displayTops.map(top => {
@@ -51,6 +54,7 @@ import Slider from "react-slick";
             }
             </Slider>
         </div>
+    </div>
     </div>
    
     )}
