@@ -101,7 +101,7 @@ export default function HowItWorks () {
               </div>
               <div className="max-w-xs">
                 <h3 className="mb-6 text-lg font-bold font-heading">Register account</h3>
-                <p className="text-lg">It’s over, maecenas tincidunt malesuada dolor sit amet malesuada.</p>
+                <p className="text-lg">Please sign up and sign in so we can keep your outfits saved.</p>
               </div>
             </li>
             <li className="flex pb-10 mb-8 border-b border-gray-50">
@@ -109,8 +109,8 @@ export default function HowItWorks () {
                 <span className="flex justify-center items-center w-14 h-14 bg-blue-50 text-lg font-bold rounded-full">2</span>
               </div>
               <div className="max-w-xs">
-                <h3 className="mb-6 text-lg font-bold font-heading">Customize tools</h3>
-                <p className="text-lg">The brown me quam, sagittis porttitor lorem vel, commodo fringilla nisl.</p>
+                <h3 className="mb-6 text-lg font-bold font-heading">View our collection</h3>
+                <p className="text-lg">Browse our collection of tops, bottoms and shoes alongside one another.</p>
               </div>
             </li>
             <li className="flex pb-10 border-b border-gray-50">
@@ -118,8 +118,8 @@ export default function HowItWorks () {
                 <span className="flex justify-center items-center w-14 h-14 bg-blue-50 text-lg font-bold rounded-full">3</span>
               </div>
               <div className="max-w-xs">
-                <h3 className="mb-6 text-lg font-bold font-heading">Work with your team</h3>
-                <p className="text-lg">The time, this accumsan augue, posuere posuere elit lorem.</p>
+                <h3 className="mb-6 text-lg font-bold font-heading">Make a selection of each</h3>
+                <p className="text-lg">Simply click on one top, one bottom and shoe, then click save.</p>
               </div>
             </li>
           </ul>
